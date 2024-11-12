@@ -1,0 +1,2 @@
+# sheets-link-copier
+Googleスプレッドシート・Googleドキュメント・GoogleスライドでタイトルつきのリンクをコピーするChrome拡張機能
