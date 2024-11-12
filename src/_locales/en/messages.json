@@ -1,0 +1,8 @@
+{
+  "description": {
+    "message": "Copy the link with title in Google Sheets/Docs/Slides."
+  },
+  "copyLinkDescription": {
+    "message": "Copy the text link to clipboard"
+  }
+}

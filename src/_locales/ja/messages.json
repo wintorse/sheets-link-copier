@@ -1,0 +1,8 @@
+{
+  "description": {
+    "message": "Googleスプレッドシート/ドキュメント/スライドでタイトルつきのリンクをコピーします。"
+  },
+  "copyLinkDescription": {
+    "message": "テキストリンクをクリップボードにコピー"
+  }
+}

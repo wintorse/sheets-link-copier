@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Sheets Link Copier",
+  "version": "0.1",
+  "default_locale": "en",
+  "description": "__MSG_description__",
+  "homepage_url": "https://github.com/wintorse/sheets-link-copier",
+  "permissions": ["activeTab", "clipboardWrite", "scripting", "tabs"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "copy-link": {
+      "suggested_key": {
+        "default": "Alt+L",
+        "mac": "MacCtrl+L"
+      },
+      "description": "__MSG_copyLinkDescription__"
+    }
+  }
+}
