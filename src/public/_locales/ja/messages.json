@@ -1,0 +1,14 @@
+{
+  "description": {
+    "message": "Google スプレッドシートや GitHub Pull Request などのタイトルつきリンクをコピーします。"
+  },
+  "copyLinkDescription": {
+    "message": "リンクをコピー"
+  },
+  "copyLinkForSlackDescription": {
+    "message": "Slack 絵文字つきのリンクをコピー"
+  },
+  "copyTitleDescription": {
+    "message": "タイトルをコピー"
+  }
+}

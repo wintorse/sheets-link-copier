@@ -1,0 +1,33 @@
+<!-- ユーザが絵文字名を変更できる -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Slack Emoji Settings</h1>
+        <form id="emojiForm">
+            <label for="emojiName-google-sheets">Google Sheets</label>
+            <input type="text" id="emojiName-google-sheets" placeholder="Emoji Name">
+            <label for="emojiName-google-docs">Google Docs</label>
+            <input type="text" id="emojiName-google-docs" placeholder="Emoji Name">
+            <label for="emojiName-google-slides">Google Slides</label>
+            <input type="text" id="emojiName-google-slides" placeholder="Emoji Name">
+            <label for="emojiName-google-drive">Google Drive</label>
+            <input type="text" id="emojiName-google-drive" placeholder="Emoji Name">
+            <label for="emojiName-github">GitHub</label>
+            <input type="text" id="emojiName-github" placeholder="Emoji Name">
+            <label for="emojiName-github-pull-request">GitHub Pull Request</label>
+            <input type="text" id="emojiName-github-pull-request" placeholder="Emoji Name">
+            <label for="emojiName-github-issue">GitHub Issue</label>
+            <input type="text" id="emojiName-github-issue" placeholder="Emoji Name">
+            <label for="emojiName-asana-task">Asana Task</label>
+            <input type="text" id="emojiName-asana-task" placeholder="Emoji Name">
+            <button id="updateEmojiNames">Change emoji names</button>
+        </form>
+    </div>
+    <script src="popup.js"></script>
+</html>

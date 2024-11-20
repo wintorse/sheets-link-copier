@@ -1,0 +1,14 @@
+{
+  "description": {
+    "message": "Copy the titled link from a Google spreadsheet, GitHub Pull Request, etc."
+  },
+  "copyLinkDescription": {
+    "message": "Copy the link"
+  },
+  "copyLinkForSlackDescription": {
+    "message": "Copy the link with Slack emoji"
+  },
+  "copyTitleDescription": {
+    "message": "Copy the title"
+  }
+}

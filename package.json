@@ -1,0 +1,26 @@
+{
+  "name": "sheets-link-copier",
+  "version": "1.0.0",
+  "description": "Copy the link with title in Google Sheets/Docs/Slides, GitHub Pull Request/Issue, and Asana Task.",
+  "main": "src/background.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build --emptyOutDir"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wintorse/sheets-link-copier.git"
+  },
+  "author": "wintorse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wintorse/sheets-link-copier/issues"
+  },
+  "homepage": "https://github.com/wintorse/sheets-link-copier#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.283",
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}
