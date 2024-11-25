@@ -10,5 +10,17 @@
   },
   "copyTitleDescription": {
     "message": "タイトルをコピー"
+  },
+  "copyTitleSuccess": {
+    "message": "タイトルをクリップボードにコピーしました"
+  },
+  "copyTitleFailure": {
+    "message": "タイトルのコピーに失敗しました"
+  },
+  "copyLinkSuccess": {
+    "message": "リンクをクリップボードにコピーしました"
+  },
+  "copyLinkFailure": {
+    "message": "リンクのコピーに失敗しました"
   }
 }

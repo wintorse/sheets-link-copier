@@ -10,5 +10,17 @@
   },
   "copyTitleDescription": {
     "message": "Copy the title"
+  },
+  "copyTitleSuccess": {
+    "message": "Title copied to clipboard"
+  },
+  "copyTitleFailure": {
+    "message": "Failed to copy title to clipboard"
+  },
+  "copyLinkSuccess": {
+    "message": "Link copied to clipboard"
+  },
+  "copyLinkFailure": {
+    "message": "Failed to copy link to clipboard"
   }
 }

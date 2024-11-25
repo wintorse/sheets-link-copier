@@ -1,10 +1,9 @@
-<!-- ユーザが絵文字名を変更できる -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Settings</title>
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="styles/popup.css">
 </head>
 <body>
     <div class="container">
@@ -24,10 +23,16 @@
             <input type="text" id="emojiName-github-pull-request" placeholder="Emoji Name">
             <label for="emojiName-github-issue">GitHub Issue</label>
             <input type="text" id="emojiName-github-issue" placeholder="Emoji Name">
+            <label for="emojiName-jira-issue">Jira Issue</label>
+            <input type="text" id="emojiName-jira-issue" placeholder="Emoji Name">
             <label for="emojiName-asana-task">Asana Task</label>
             <input type="text" id="emojiName-asana-task" placeholder="Emoji Name">
+            <label for="emojiName-backlog-issue">Backlog Issue</label>
+            <input type="text" id="emojiName-backlog-issue" placeholder="Emoji Name">
+            <label for="emojiName-redmine-ticket">Redmine Ticket</label>
+            <input type="text" id="emojiName-redmine-ticket" placeholder="Emoji Name">
             <button id="updateEmojiNames">Change emoji names</button>
         </form>
     </div>
-    <script src="popup.js"></script>
+    <script type="module" src="../scripts/popup.js"></script>
 </html>
