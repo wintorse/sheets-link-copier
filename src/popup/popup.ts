@@ -1,13 +1,5 @@
-type EmojiNames = {
-  googleSheets: string;
-  googleDocs: string;
-  googleSlides: string;
-  googleDrive: string;
-  github: string;
-  githubPullRequest: string;
-  githubIssue: string;
-  asanaTask: string;
-};
+import type { EmojiNames } from "../types/types";
+import { defaultEmojiNames } from "../types/constants";
 
 const emojiElements: { [key in keyof EmojiNames]: string } = {
   googleSheets: "emojiName-google-sheets",
@@ -17,21 +9,12 @@ const emojiElements: { [key in keyof EmojiNames]: string } = {
   github: "emojiName-github",
   githubPullRequest: "emojiName-github-pull-request",
   githubIssue: "emojiName-github-issue",
+  jiraIssue: "emojiName-jira-issue",
   asanaTask: "emojiName-asana-task",
+  backlogIssue: "emojiName-backlog-issue",
+  redmineTicket: "emojiName-redmine-ticket",
 };
 
-const defaultEmojiNames: EmojiNames = {
-  googleSheets: ":google_sheets:",
-  googleDocs: ":google_docs:",
-  googleSlides: ":google_slides:",
-  googleDrive: ":google_drive_2:",
-  github: ":github:",
-  githubPullRequest: ":open_pull_request:",
-  githubIssue: ":open_issue:",
-  asanaTask: ":asana:",
-};
-
-// 絵文字名の取得
 function getEmojiNames() {
   chrome.storage.local.get("emojiNames", function (data) {
     const emojiNames: EmojiNames = data.emojiNames || defaultEmojiNames;
@@ -48,7 +31,6 @@ function getEmojiNames() {
   });
 }
 
-// 絵文字名の更新
 function updateEmojiNames() {
   const emojiNames: Partial<EmojiNames> = {};
   for (const key in emojiElements) {
@@ -62,7 +44,7 @@ function updateEmojiNames() {
   chrome.storage.local.set({ emojiNames: emojiNames });
 }
 
-// 初期表示時に絵文字名を取得してフォームに反映
+// Get emoji names when the page is loaded and reflect them in the form.
 document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.local.get("emojiNames", function (data) {
     if (!data.emojiNames) {
@@ -76,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ボタンのクリックイベントをlisten
 document.getElementById("updateEmojiNames")?.addEventListener("click", () => {
   updateEmojiNames();
 });
