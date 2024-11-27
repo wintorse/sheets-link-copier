@@ -1,6 +1,6 @@
 {
   "name": "sheets-link-copier",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Copy the link with title in Google Sheets/Docs/Slides, GitHub Pull Request/Issue, and Asana Task.",
   "main": "src/background.ts",
   "type": "module",
