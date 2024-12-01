@@ -44,8 +44,17 @@ function updateEmojiNames() {
   chrome.storage.local.set({ emojiNames: emojiNames });
 }
 
-// Get emoji names when the page is loaded and reflect them in the form.
 document.addEventListener("DOMContentLoaded", () => {
+  // i18n
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach((el) => {
+    const messageKey = el.getAttribute("data-i18n");
+    el.textContent = messageKey
+      ? chrome.i18n.getMessage(messageKey)
+      : el.textContent;
+  });
+
+  // Get emoji names when the page is loaded and reflect them in the form.
   chrome.storage.local.get("emojiNames", function (data) {
     if (!data.emojiNames) {
       chrome.storage.local.set(
