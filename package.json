@@ -1,7 +1,7 @@
 {
-  "name": "sheets-link-copier",
+  "name": "copylink.dev",
   "version": "1.1.0",
-  "description": "Copy the link with title in Google Sheets/Docs/Slides, GitHub Pull Request/Issue, and Asana Task.",
+  "description": "Browser extension that copies the link with a formatted title and Slack emojis before it.",
   "main": "src/background.ts",
   "type": "module",
   "scripts": {
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wintorse/sheets-link-copier.git"
+    "url": "git+https://github.com/wintorse/copylink-dev.git"
   },
   "author": "wintorse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wintorse/sheets-link-copier/issues"
+    "url": "https://github.com/wintorse/copylink-dev/issues"
   },
-  "homepage": "https://github.com/wintorse/sheets-link-copier#readme",
+  "homepage": "https://github.com/wintorse/copylink-dev#readme",
   "devDependencies": {
-    "@types/chrome": "^0.0.283",
-    "@types/node": "^22.9.0",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.11"
+    "@types/chrome": "^0.0.287",
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.1"
   }
 }
