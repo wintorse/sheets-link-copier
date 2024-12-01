@@ -1,15 +1,15 @@
 {
   "description": {
-    "message": "Copy the titled link from a Google spreadsheet, GitHub Pull Request, etc."
+    "message": "Copy the link with a formatted title and Slack emoji from a Google Sheets and other sources."
   },
   "copyLinkDescription": {
-    "message": "Copy the link"
+    "message": "Copy link"
   },
   "copyLinkForSlackDescription": {
-    "message": "Copy the link with Slack emoji"
+    "message": "Copy link with a Slack emoji"
   },
   "copyTitleDescription": {
-    "message": "Copy the title"
+    "message": "Copy title"
   },
   "copyTitleSuccess": {
     "message": "Title copied to clipboard"

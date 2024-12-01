@@ -307,7 +307,7 @@ export async function copyTextLink(command: string) {
     link.onload = () => {
       const toast = document.createElement("div");
       toast.textContent = message;
-      toast.className = "sheets-link-copier-toast";
+      toast.className = "copylink-dev-toast";
 
       // Set initial styles
       toast.style.opacity = "0";

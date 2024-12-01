@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Sheets Link Copier",
+  "name": "copylink.dev",
   "description": "__MSG_description__",
   "version": "1.1.0",
   "default_locale": "en",
@@ -10,7 +10,7 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
-  "homepage_url": "https://github.com/wintorse/sheets-link-copier",
+  "homepage_url": "https://github.com/wintorse/copylink-dev",
   "permissions": [
     "activeTab",
     "clipboardWrite",
