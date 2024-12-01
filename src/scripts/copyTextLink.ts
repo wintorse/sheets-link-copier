@@ -9,11 +9,11 @@
  * The function also displays a toast message indicating the success or failure of the copy operation.
  */
 export async function copyTextLink(command: string) {
+  // MARK: main
   const title = _getFormattedTitle();
   const url = document.URL;
   const html = `<a href="${url}">${title}</a>`;
 
-  // Function to get localized message
   const t = (key: string): string => chrome.i18n.getMessage(key);
 
   // Copy the title only to the clipboard
@@ -21,11 +21,11 @@ export async function copyTextLink(command: string) {
     navigator.clipboard
       .writeText(title)
       .then(() => {
-        showToast(t("copyTitleSuccess"));
+        _showToast(t("copyTitleSuccess"));
       })
       .catch((err) => {
         console.error("Failed to copy title to clipboard", err);
-        showToast(t("copyTitleFailure"));
+        _showToast(t("copyTitleFailure"));
       });
     return;
   }
@@ -40,11 +40,11 @@ export async function copyTextLink(command: string) {
         }),
       ])
       .then(() => {
-        showToast(t("copyLinkSuccess"));
+        _showToast(t("copyLinkSuccess"));
       })
       .catch((err) => {
         console.error("Failed to copy link to clipboard", err);
-        showToast(t("copyLinkFailure"));
+        _showToast(t("copyLinkFailure"));
       });
   }
 
@@ -61,14 +61,15 @@ export async function copyTextLink(command: string) {
         }),
       ])
       .then(() => {
-        showToast(t("copyLinkSuccess"));
+        _showToast(t("copyLinkSuccess"));
       })
       .catch((err) => {
         console.error("Failed to copy link to clipboard", err);
-        showToast(t("copyLinkFailure"));
+        _showToast(t("copyLinkFailure"));
       });
   }
 
+  // MARK: get title
   /**
    * Retrieves the formatted title of the current document.
    *
@@ -224,6 +225,7 @@ export async function copyTextLink(command: string) {
     redmineTicket: ":redmine_ticket:",
   };
 
+  // MARK: get emoji name
   /**
    * Retrieves the appropriate emoji name based on the current URL's hostname and pathname, or the document body ID.
    * The emoji names are stored in the browser's local storage under the key "emojiNames".
@@ -288,12 +290,13 @@ export async function copyTextLink(command: string) {
     });
   }
 
+  // MARK: show toast
   /**
    * Displays a toast message on the bottom left of the screen.
    *
    * @param {string} message
    */
-  function showToast(message: string) {
+  function _showToast(message: string) {
     // load CSS file for toast
     const link = document.createElement("link");
     link.rel = "stylesheet";
@@ -305,7 +308,15 @@ export async function copyTextLink(command: string) {
       const toast = document.createElement("div");
       toast.textContent = message;
       toast.className = "sheets-link-copier-toast";
+
+      // Set initial styles
+      toast.style.opacity = "0";
+      toast.style.transform = "translate3d(0, 24px, 0)";
+
       document.body.appendChild(toast);
+
+      // Force reflow
+      toast.offsetHeight;
 
       // slide in and fade in
       setTimeout(() => {
@@ -315,11 +326,11 @@ export async function copyTextLink(command: string) {
 
       // slide out and fade out
       setTimeout(() => {
-        toast.style.transform = "translate3d(0, 72px, 0)";
+        toast.style.transform = "translate3d(0, 12px, 0)";
         toast.style.opacity = "0";
         setTimeout(() => {
           toast.remove();
-        }, 200);
+        }, 310);
       }, 3000);
     };
   }
